@@ -3,7 +3,7 @@ PLBlockIMP
 
 
 PLBlockIMP provides an open-source implementation of [imp_implementationWithBlock()](http://www.friday.com/bbum/2011/03/17/ios-4-3-imp_implementationwithblock/), using
-vm_remap()-based trampolines, as described in [Implementing imp_implementationWithBlock](http://landonf.bikemonkey.org/code/objc/imp_implementationWithBlock.20110413.html).
+vm_remap()-based trampolines as described in [Implementing imp_implementationWithBlock](http://landonf.bikemonkey.org/code/objc/imp_implementationWithBlock.20110413.html).
 
 PLBlockIMP will generate a lightweight, high-performance function pointer trampoline that may be used to register a block as an Objective-C method implementation. Mac OS X 10.6+ and
 iOS 4.0+ are supported.
