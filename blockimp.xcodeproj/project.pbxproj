@@ -1,0 +1,1465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		050C972B1353D7470080FE20 /* PLBlockIMP */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 050C974A1353D7A00080FE20 /* Build configuration list for PBXAggregateTarget "PLBlockIMP" */;
+			buildPhases = (
+			);
+			dependencies = (
+				05F5B997135728520057187D /* PBXTargetDependency */,
+				050C972F1353D74B0080FE20 /* PBXTargetDependency */,
+			);
+			name = PLBlockIMP;
+			productName = PLBlockIMP;
+		};
+		050C97401353D7690080FE20 /* Tests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 050C974B1353D7A00080FE20 /* Build configuration list for PBXAggregateTarget "Tests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				050C97721353D7F00080FE20 /* PBXTargetDependency */,
+				050C97461353D7700080FE20 /* PBXTargetDependency */,
+				050C97441353D76F0080FE20 /* PBXTargetDependency */,
+			);
+			name = Tests;
+			productName = Tests;
+		};
+		05F5B9DF13572A250057187D /* Disk Image */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 05F5B9E613572A550057187D /* Build configuration list for PBXAggregateTarget "Disk Image" */;
+			buildPhases = (
+				05F5B9DE13572A250057187D /* Create Disk Image */,
+			);
+			dependencies = (
+				05F5B9E513572A370057187D /* PBXTargetDependency */,
+				05F5B9E313572A350057187D /* PBXTargetDependency */,
+			);
+			name = "Disk Image";
+			productName = "Disk Image";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		050C97351353D7550080FE20 /* trampoline_table.c in Sources */ = {isa = PBXBuildFile; fileRef = 05DEA72F134D6E9500F49BDB /* trampoline_table.c */; };
+		050C97361353D7550080FE20 /* blockimp.c in Sources */ = {isa = PBXBuildFile; fileRef = 0530FC4D135138E600829149 /* blockimp.c */; };
+		050C974F1353D7BE0080FE20 /* blockimp_x86_32.tramp in Sources */ = {isa = PBXBuildFile; fileRef = 0530FAAA1351144E00829149 /* blockimp_x86_32.tramp */; };
+		050C97501353D7BE0080FE20 /* blockimp_x86_32_stret.tramp in Sources */ = {isa = PBXBuildFile; fileRef = 05F565F613526F69003D62C7 /* blockimp_x86_32_stret.tramp */; };
+		050C97591353D7CB0080FE20 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05F56AC11352D768003D62C7 /* MainWindow.xib */; };
+		050C975B1353D7CB0080FE20 /* blockimp_tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BE8548135252A7001647E3 /* blockimp_tests.m */; };
+		050C975C1353D7CB0080FE20 /* GTMIPhoneUnitTestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F56A8C1352D5CB003D62C7 /* GTMIPhoneUnitTestDelegate.m */; };
+		050C975D1353D7CB0080FE20 /* GTMIPhoneUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F56A8D1352D5CB003D62C7 /* GTMIPhoneUnitTestMain.m */; };
+		050C975E1353D7CB0080FE20 /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F56A8F1352D5CB003D62C7 /* GTMSenTestCase.m */; };
+		050C97601353D7CB0080FE20 /* libPLBlockIMP-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F569F01352C976003D62C7 /* libPLBlockIMP-iOS.a */; };
+		0530FAAE1351147500829149 /* blockimp_x86_32.tramp in Sources */ = {isa = PBXBuildFile; fileRef = 0530FAAA1351144E00829149 /* blockimp_x86_32.tramp */; };
+		0530FC4E135138E600829149 /* blockimp.h in Headers */ = {isa = PBXBuildFile; fileRef = 0530FC4C135138E600829149 /* blockimp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0530FC4F135138E600829149 /* blockimp.c in Sources */ = {isa = PBXBuildFile; fileRef = 0530FC4D135138E600829149 /* blockimp.c */; };
+		05BE8549135252A7001647E3 /* blockimp_tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BE8548135252A7001647E3 /* blockimp_tests.m */; };
+		05BE8559135254A8001647E3 /* PLBlockIMP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* PLBlockIMP.framework */; };
+		05DEA730134D6E9500F49BDB /* trampoline_table.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DEA72E134D6E9500F49BDB /* trampoline_table.h */; };
+		05DEA731134D6E9500F49BDB /* trampoline_table.c in Sources */ = {isa = PBXBuildFile; fileRef = 05DEA72F134D6E9500F49BDB /* trampoline_table.c */; };
+		05F565F913526F88003D62C7 /* blockimp_x86_32_stret.tramp in Sources */ = {isa = PBXBuildFile; fileRef = 05F565F613526F69003D62C7 /* blockimp_x86_32_stret.tramp */; };
+		05F56741135288F5003D62C7 /* PLBlockIMP.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* PLBlockIMP.framework */; };
+		05F569F31352C99A003D62C7 /* trampoline_table.c in Sources */ = {isa = PBXBuildFile; fileRef = 05DEA72F134D6E9500F49BDB /* trampoline_table.c */; };
+		05F569F41352C99A003D62C7 /* blockimp.c in Sources */ = {isa = PBXBuildFile; fileRef = 0530FC4D135138E600829149 /* blockimp.c */; };
+		05F56A011352CA2C003D62C7 /* blockimp_arm.tramp in Sources */ = {isa = PBXBuildFile; fileRef = 05F569FF1352CA19003D62C7 /* blockimp_arm.tramp */; };
+		05F56A021352CA2C003D62C7 /* blockimp_arm_stret.tramp in Sources */ = {isa = PBXBuildFile; fileRef = 05F56A001352CA28003D62C7 /* blockimp_arm_stret.tramp */; };
+		05F56A911352D5D7003D62C7 /* GTMIPhoneUnitTestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F56A8C1352D5CB003D62C7 /* GTMIPhoneUnitTestDelegate.m */; };
+		05F56A921352D5D7003D62C7 /* GTMIPhoneUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F56A8D1352D5CB003D62C7 /* GTMIPhoneUnitTestMain.m */; };
+		05F56A931352D5D7003D62C7 /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F56A8F1352D5CB003D62C7 /* GTMSenTestCase.m */; };
+		05F56A951352D5DD003D62C7 /* libPLBlockIMP-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F569F01352C976003D62C7 /* libPLBlockIMP-iOS.a */; };
+		05F56A961352D5E9003D62C7 /* blockimp_tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BE8548135252A7001647E3 /* blockimp_tests.m */; };
+		05F56AC21352D768003D62C7 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05F56AC11352D768003D62C7 /* MainWindow.xib */; };
+		05F56B151352D9FD003D62C7 /* blockimp_x86_64.tramp in Sources */ = {isa = PBXBuildFile; fileRef = 05F56B131352D9AF003D62C7 /* blockimp_x86_64.tramp */; };
+		05F56B161352D9FD003D62C7 /* blockimp_x86_64_stret.tramp in Sources */ = {isa = PBXBuildFile; fileRef = 05F56B141352D9BB003D62C7 /* blockimp_x86_64_stret.tramp */; };
+		05F5B9981357285C0057187D /* blockimp.h in Headers */ = {isa = PBXBuildFile; fileRef = 0530FC4C135138E600829149 /* blockimp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05F5B9D4135729B70057187D /* PLBlockIMP.h in Headers */ = {isa = PBXBuildFile; fileRef = 05F5B9D3135729B70057187D /* PLBlockIMP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05F5B9D5135729B70057187D /* PLBlockIMP.h in Headers */ = {isa = PBXBuildFile; fileRef = 05F5B9D3135729B70057187D /* PLBlockIMP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
+		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		050C973A1353D7550080FE20 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "*.tramp";
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+				"${DERIVED_FILE_DIR}/${CURRENT_ARCH}/${INPUT_FILE_BASE}.s",
+				"${DERIVED_FILE_DIR}/${CURRENT_ARCH}/${INPUT_FILE_BASE}.h",
+				"${DERIVED_FILE_DIR}/${CURRENT_ARCH}/${INPUT_FILE_BASE}_config.c",
+			);
+			script = "OUTPUT_DIR=\"${DERIVED_FILE_DIR}/${CURRENT_ARCH}/\"\nmkdir -p \"${OUTPUT_DIR}\"\n\npushd `dirname ${INPUT_FILE_PATH}` >/dev/null\n\"${SRCROOT}/Other Sources/gentramp.sh\" \"${OUTPUT_DIR}\"\npopd >/dev/null";
+		};
+		0530FABC135114A700829149 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "*.tramp";
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+				"${DERIVED_FILE_DIR}/${CURRENT_ARCH}/${INPUT_FILE_BASE}.s",
+				"${DERIVED_FILE_DIR}/${CURRENT_ARCH}/${INPUT_FILE_BASE}.h",
+				"${DERIVED_FILE_DIR}/${CURRENT_ARCH}/${INPUT_FILE_BASE}_config.c",
+			);
+			script = "OUTPUT_DIR=\"${DERIVED_FILE_DIR}/${CURRENT_ARCH}/\"\nmkdir -p \"${OUTPUT_DIR}\"\n\npushd `dirname ${INPUT_FILE_PATH}` >/dev/null\n\"${SRCROOT}/Other Sources/gentramp.sh\" \"${OUTPUT_DIR}\"\npopd >/dev/null";
+		};
+		05F56A071352CAB1003D62C7 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "*.tramp";
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+				"${DERIVED_FILE_DIR}/${CURRENT_ARCH}/${INPUT_FILE_BASE}.s",
+				"${DERIVED_FILE_DIR}/${CURRENT_ARCH}/${INPUT_FILE_BASE}.h",
+				"${DERIVED_FILE_DIR}/${CURRENT_ARCH}/${INPUT_FILE_BASE}_config.c",
+			);
+			script = "OUTPUT_DIR=\"${DERIVED_FILE_DIR}/${CURRENT_ARCH}/\"\nmkdir -p \"${OUTPUT_DIR}\"\n\npushd `dirname ${INPUT_FILE_PATH}` >/dev/null\n\"${SRCROOT}/Other Sources/gentramp.sh\" \"${OUTPUT_DIR}\"\npopd >/dev/null";
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXContainerItemProxy section */
+		050C972E1353D74B0080FE20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = "PLBlockIMP-MacOSX";
+		};
+		050C97431353D76F0080FE20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05BE853F1352527D001647E3;
+			remoteInfo = "Tests-MacOSX";
+		};
+		050C97451353D7700080FE20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05F56A751352D557003D62C7;
+			remoteInfo = "PLBlockIMP-iOS-Tests";
+		};
+		050C97571353D7CB0080FE20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05F569EF1352C976003D62C7;
+			remoteInfo = "PLBlockIMP-iOS";
+		};
+		050C97711353D7F00080FE20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 050C97551353D7CB0080FE20;
+			remoteInfo = "PLBlockIMP-iOSimulator-Tests";
+		};
+		05BE856B135254FD001647E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = "PLBlockIMP-MacOSX";
+		};
+		05F56A971352D5EC003D62C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05F569EF1352C976003D62C7;
+			remoteInfo = "PLBlockIMP-iOS";
+		};
+		05F5B9921357284C0057187D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05F569EF1352C976003D62C7 /* PLBlockIMP-iOS-Device */;
+			remoteInfo = "PLBlockIMP-iOS-Device";
+		};
+		05F5B9941357284E0057187D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 050C97321353D7550080FE20 /* PLBlockIMP-iOS-Simulator */;
+			remoteInfo = "PLBlockIMP-iOS-Simulator";
+		};
+		05F5B996135728520057187D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05F5B9891357283C0057187D /* PLBlockIMP-iOS */;
+			remoteInfo = "PLBlockIMP-iOS";
+		};
+		05F5B9E213572A350057187D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 050C972B1353D7470080FE20 /* PLBlockIMP */;
+			remoteInfo = PLBlockIMP;
+		};
+		05F5B9E413572A370057187D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 050C97401353D7690080FE20 /* Tests */;
+			remoteInfo = Tests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		05BE8564135254E5001647E3 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				05F56741135288F5003D62C7 /* PLBlockIMP.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		050C910A13525AF80080FE20 /* blockimp_private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blockimp_private.h; sourceTree = "<group>"; };
+		050C973E1353D7550080FE20 /* libPLBlockIMP-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPLBlockIMP-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		050C97641353D7CB0080FE20 /* BlockIMP-iOS-Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BlockIMP-iOS-Tests.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		050C97671353D7CB0080FE20 /* PLBlockIMP-iOSimulator-Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PLBlockIMP-iOSimulator-Tests-Info.plist"; sourceTree = "<group>"; };
+		0530FAAA1351144E00829149 /* blockimp_x86_32.tramp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = blockimp_x86_32.tramp; sourceTree = "<group>"; };
+		0530FB15135115A500829149 /* gentramp.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = gentramp.sh; sourceTree = "<group>"; };
+		0530FC4C135138E600829149 /* blockimp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blockimp.h; sourceTree = "<group>"; };
+		0530FC4D135138E600829149 /* blockimp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = blockimp.c; sourceTree = "<group>"; };
+		05BE85401352527D001647E3 /* Tests-MacOSX.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests-MacOSX.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		05BE85411352527D001647E3 /* Tests-MacOSX-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-MacOSX-Info.plist"; sourceTree = "<group>"; };
+		05BE8548135252A7001647E3 /* blockimp_tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = blockimp_tests.m; sourceTree = "<group>"; };
+		05DEA72E134D6E9500F49BDB /* trampoline_table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trampoline_table.h; sourceTree = "<group>"; };
+		05DEA72F134D6E9500F49BDB /* trampoline_table.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = trampoline_table.c; sourceTree = "<group>"; };
+		05F565F613526F69003D62C7 /* blockimp_x86_32_stret.tramp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = blockimp_x86_32_stret.tramp; sourceTree = "<group>"; };
+		05F569F01352C976003D62C7 /* libPLBlockIMP-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPLBlockIMP-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		05F569FF1352CA19003D62C7 /* blockimp_arm.tramp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = blockimp_arm.tramp; sourceTree = "<group>"; };
+		05F56A001352CA28003D62C7 /* blockimp_arm_stret.tramp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = blockimp_arm_stret.tramp; sourceTree = "<group>"; };
+		05F56A761352D557003D62C7 /* BlockIMP-iOS-Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BlockIMP-iOS-Tests.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		05F56A781352D557003D62C7 /* PLBlockIMP-iOS-Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PLBlockIMP-iOS-Tests-Info.plist"; sourceTree = "<group>"; };
+		05F56A871352D5CB003D62C7 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
+		05F56A881352D5CB003D62C7 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		05F56A891352D5CB003D62C7 /* ReleaseNotes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReleaseNotes.txt; sourceTree = "<group>"; };
+		05F56A8B1352D5CB003D62C7 /* GTMIPhoneUnitTestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMIPhoneUnitTestDelegate.h; sourceTree = "<group>"; };
+		05F56A8C1352D5CB003D62C7 /* GTMIPhoneUnitTestDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMIPhoneUnitTestDelegate.m; sourceTree = "<group>"; };
+		05F56A8D1352D5CB003D62C7 /* GTMIPhoneUnitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMIPhoneUnitTestMain.m; sourceTree = "<group>"; };
+		05F56A8E1352D5CB003D62C7 /* GTMSenTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMSenTestCase.h; sourceTree = "<group>"; };
+		05F56A8F1352D5CB003D62C7 /* GTMSenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMSenTestCase.m; sourceTree = "<group>"; };
+		05F56A901352D5CB003D62C7 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		05F56AC11352D768003D62C7 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		05F56B131352D9AF003D62C7 /* blockimp_x86_64.tramp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = blockimp_x86_64.tramp; sourceTree = "<group>"; };
+		05F56B141352D9BB003D62C7 /* blockimp_x86_64_stret.tramp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = blockimp_x86_64_stret.tramp; sourceTree = "<group>"; };
+		05F5B98A1357283C0057187D /* PLBlockIMP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PLBlockIMP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		05F5B9D3135729B70057187D /* PLBlockIMP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLBlockIMP.h; sourceTree = "<group>"; };
+		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DC2EF5B0486A6940098B216 /* PLBlockIMP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PLBlockIMP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		050C97391353D7550080FE20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		050C975F1353D7CB0080FE20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				050C97601353D7CB0080FE20 /* libPLBlockIMP-iOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05BE853D1352527D001647E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05BE8559135254A8001647E3 /* PLBlockIMP.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05F569EE1352C976003D62C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05F56A741352D557003D62C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05F56A951352D5DD003D62C7 /* libPLBlockIMP-iOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05F5B9881357283C0057187D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DC2EF560486A6940098B216 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DC2EF5B0486A6940098B216 /* PLBlockIMP.framework */,
+				05BE85401352527D001647E3 /* Tests-MacOSX.octest */,
+				05F569F01352C976003D62C7 /* libPLBlockIMP-iOS.a */,
+				05F56A761352D557003D62C7 /* BlockIMP-iOS-Tests.app */,
+				050C973E1353D7550080FE20 /* libPLBlockIMP-iOS.a */,
+				050C97641353D7CB0080FE20 /* BlockIMP-iOS-Tests.app */,
+				05F5B98A1357283C0057187D /* PLBlockIMP.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0530FAA8135107DF00829149 /* Allocator */ = {
+			isa = PBXGroup;
+			children = (
+				05DEA72E134D6E9500F49BDB /* trampoline_table.h */,
+				05DEA72F134D6E9500F49BDB /* trampoline_table.c */,
+			);
+			name = Allocator;
+			sourceTree = "<group>";
+		};
+		05F565F513526F46003D62C7 /* x86_32 */ = {
+			isa = PBXGroup;
+			children = (
+				0530FAAA1351144E00829149 /* blockimp_x86_32.tramp */,
+				05F565F613526F69003D62C7 /* blockimp_x86_32_stret.tramp */,
+			);
+			path = x86_32;
+			sourceTree = "<group>";
+		};
+		05F569FE1352CA03003D62C7 /* ARM */ = {
+			isa = PBXGroup;
+			children = (
+				05F569FF1352CA19003D62C7 /* blockimp_arm.tramp */,
+				05F56A001352CA28003D62C7 /* blockimp_arm_stret.tramp */,
+			);
+			path = ARM;
+			sourceTree = "<group>";
+		};
+		05F56A851352D5CB003D62C7 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				05F56A861352D5CB003D62C7 /* google-toolbox-for-mac-1-5-1 */,
+				05F56A901352D5CB003D62C7 /* README.txt */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		05F56A861352D5CB003D62C7 /* google-toolbox-for-mac-1-5-1 */ = {
+			isa = PBXGroup;
+			children = (
+				05F56A871352D5CB003D62C7 /* COPYING */,
+				05F56A881352D5CB003D62C7 /* GTMDefines.h */,
+				05F56A891352D5CB003D62C7 /* ReleaseNotes.txt */,
+				05F56A8A1352D5CB003D62C7 /* UnitTesting */,
+			);
+			path = "google-toolbox-for-mac-1-5-1";
+			sourceTree = "<group>";
+		};
+		05F56A8A1352D5CB003D62C7 /* UnitTesting */ = {
+			isa = PBXGroup;
+			children = (
+				05F56A8B1352D5CB003D62C7 /* GTMIPhoneUnitTestDelegate.h */,
+				05F56A8C1352D5CB003D62C7 /* GTMIPhoneUnitTestDelegate.m */,
+				05F56A8D1352D5CB003D62C7 /* GTMIPhoneUnitTestMain.m */,
+				05F56A8E1352D5CB003D62C7 /* GTMSenTestCase.h */,
+				05F56A8F1352D5CB003D62C7 /* GTMSenTestCase.m */,
+			);
+			path = UnitTesting;
+			sourceTree = "<group>";
+		};
+		05F56B121352D981003D62C7 /* x86_64 */ = {
+			isa = PBXGroup;
+			children = (
+				05F56B131352D9AF003D62C7 /* blockimp_x86_64.tramp */,
+				05F56B141352D9BB003D62C7 /* blockimp_x86_64_stret.tramp */,
+			);
+			path = x86_64;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* plblockimp */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AEFE84172EC02AAC07 /* Source */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				089C1665FE841158C02AAC07 /* Resources */,
+				05F56A851352D5CB003D62C7 /* Tools */,
+				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = plblockimp;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */,
+				1058C7B2FEA5585E11CA2CBB /* Other Frameworks */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C1665FE841158C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				05F56AC11352D768003D62C7 /* MainWindow.xib */,
+				05F56A781352D557003D62C7 /* PLBlockIMP-iOS-Tests-Info.plist */,
+				05BE85411352527D001647E3 /* Tests-MacOSX-Info.plist */,
+				8DC2EF5A0486A6940098B216 /* Info.plist */,
+				089C1666FE841158C02AAC07 /* InfoPlist.strings */,
+				050C97671353D7CB0080FE20 /* PLBlockIMP-iOSimulator-Tests-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				05F5B9D3135729B70057187D /* PLBlockIMP.h */,
+				0530FC4C135138E600829149 /* blockimp.h */,
+				0530FC4D135138E600829149 /* blockimp.c */,
+				050C910A13525AF80080FE20 /* blockimp_private.h */,
+				05BE8548135252A7001647E3 /* blockimp_tests.m */,
+				05F569FE1352CA03003D62C7 /* ARM */,
+				05F565F513526F46003D62C7 /* x86_32 */,
+				05F56B121352D981003D62C7 /* x86_64 */,
+				0530FAA8135107DF00829149 /* Allocator */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7B2FEA5585E11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0867D6A5FE840307C02AAC07 /* AppKit.framework */,
+				D2F7E79907B2D74100F64583 /* CoreData.framework */,
+				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0530FB15135115A500829149 /* gentramp.sh */,
+			);
+			path = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		050C97331353D7550080FE20 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05F569EC1352C976003D62C7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05F5B9851357283C0057187D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05F5B9981357285C0057187D /* blockimp.h in Headers */,
+				05F5B9D4135729B70057187D /* PLBlockIMP.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DC2EF500486A6940098B216 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05DEA730134D6E9500F49BDB /* trampoline_table.h in Headers */,
+				0530FC4E135138E600829149 /* blockimp.h in Headers */,
+				05F5B9D5135729B70057187D /* PLBlockIMP.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		050C97321353D7550080FE20 /* PLBlockIMP-iOS-Simulator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 050C973B1353D7550080FE20 /* Build configuration list for PBXNativeTarget "PLBlockIMP-iOS-Simulator" */;
+			buildPhases = (
+				050C97331353D7550080FE20 /* Headers */,
+				050C97341353D7550080FE20 /* Sources */,
+				050C97391353D7550080FE20 /* Frameworks */,
+			);
+			buildRules = (
+				050C973A1353D7550080FE20 /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = "PLBlockIMP-iOS-Simulator";
+			productName = "PLBlockIMP-iOS";
+			productReference = 050C973E1353D7550080FE20 /* libPLBlockIMP-iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		050C97551353D7CB0080FE20 /* PLBlockIMP-iOS-Simulator-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 050C97611353D7CB0080FE20 /* Build configuration list for PBXNativeTarget "PLBlockIMP-iOS-Simulator-Tests" */;
+			buildPhases = (
+				050C97581353D7CB0080FE20 /* Resources */,
+				050C975A1353D7CB0080FE20 /* Sources */,
+				050C975F1353D7CB0080FE20 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				050C97561353D7CB0080FE20 /* PBXTargetDependency */,
+			);
+			name = "PLBlockIMP-iOS-Simulator-Tests";
+			productName = "BlockIMP-iOS-Tests";
+			productReference = 050C97641353D7CB0080FE20 /* BlockIMP-iOS-Tests.app */;
+			productType = "com.apple.product-type.application";
+		};
+		05BE853F1352527D001647E3 /* Tests-MacOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05BE85441352527D001647E3 /* Build configuration list for PBXNativeTarget "Tests-MacOSX" */;
+			buildPhases = (
+				05BE853B1352527D001647E3 /* Resources */,
+				05BE853C1352527D001647E3 /* Sources */,
+				05BE853D1352527D001647E3 /* Frameworks */,
+				05BE8564135254E5001647E3 /* Copy Frameworks */,
+				05BE853E1352527D001647E3 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05BE856C135254FD001647E3 /* PBXTargetDependency */,
+			);
+			name = "Tests-MacOSX";
+			productName = "Tests-MacOSX";
+			productReference = 05BE85401352527D001647E3 /* Tests-MacOSX.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		05F569EF1352C976003D62C7 /* PLBlockIMP-iOS-Device */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05F569F71352C9BE003D62C7 /* Build configuration list for PBXNativeTarget "PLBlockIMP-iOS-Device" */;
+			buildPhases = (
+				05F569EC1352C976003D62C7 /* Headers */,
+				05F569ED1352C976003D62C7 /* Sources */,
+				05F569EE1352C976003D62C7 /* Frameworks */,
+			);
+			buildRules = (
+				05F56A071352CAB1003D62C7 /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = "PLBlockIMP-iOS-Device";
+			productName = "PLBlockIMP-iOS";
+			productReference = 05F569F01352C976003D62C7 /* libPLBlockIMP-iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		05F56A751352D557003D62C7 /* PLBlockIMP-iOS-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05F56A7B1352D557003D62C7 /* Build configuration list for PBXNativeTarget "PLBlockIMP-iOS-Tests" */;
+			buildPhases = (
+				05F56A721352D557003D62C7 /* Resources */,
+				05F56A731352D557003D62C7 /* Sources */,
+				05F56A741352D557003D62C7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05F56A981352D5EC003D62C7 /* PBXTargetDependency */,
+			);
+			name = "PLBlockIMP-iOS-Tests";
+			productName = "BlockIMP-iOS-Tests";
+			productReference = 05F56A761352D557003D62C7 /* BlockIMP-iOS-Tests.app */;
+			productType = "com.apple.product-type.application";
+		};
+		05F5B9891357283C0057187D /* PLBlockIMP-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05F5B98E1357283C0057187D /* Build configuration list for PBXNativeTarget "PLBlockIMP-iOS" */;
+			buildPhases = (
+				05F5B9851357283C0057187D /* Headers */,
+				05F5B9861357283C0057187D /* Resources */,
+				05F5B9871357283C0057187D /* Sources */,
+				05F5B9881357283C0057187D /* Frameworks */,
+				05F5B9BE135728A30057187D /* Lipo Binary */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05F5B9951357284E0057187D /* PBXTargetDependency */,
+				05F5B9931357284C0057187D /* PBXTargetDependency */,
+			);
+			name = "PLBlockIMP-iOS";
+			productName = "PLBlockIMP-iOS";
+			productReference = 05F5B98A1357283C0057187D /* PLBlockIMP.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8DC2EF4F0486A6940098B216 /* PLBlockIMP-MacOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "PLBlockIMP-MacOSX" */;
+			buildPhases = (
+				8DC2EF500486A6940098B216 /* Headers */,
+				8DC2EF520486A6940098B216 /* Resources */,
+				8DC2EF540486A6940098B216 /* Sources */,
+				8DC2EF560486A6940098B216 /* Frameworks */,
+			);
+			buildRules = (
+				0530FABC135114A700829149 /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = "PLBlockIMP-MacOSX";
+			productInstallPath = "$(HOME)/Library/Frameworks";
+			productName = plblockimp;
+			productReference = 8DC2EF5B0486A6940098B216 /* PLBlockIMP.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "blockimp" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* plblockimp */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				05F5B9DF13572A250057187D /* Disk Image */,
+				050C972B1353D7470080FE20 /* PLBlockIMP */,
+				8DC2EF4F0486A6940098B216 /* PLBlockIMP-MacOSX */,
+				05F5B9891357283C0057187D /* PLBlockIMP-iOS */,
+				05F569EF1352C976003D62C7 /* PLBlockIMP-iOS-Device */,
+				050C97321353D7550080FE20 /* PLBlockIMP-iOS-Simulator */,
+				050C97401353D7690080FE20 /* Tests */,
+				05BE853F1352527D001647E3 /* Tests-MacOSX */,
+				05F56A751352D557003D62C7 /* PLBlockIMP-iOS-Tests */,
+				050C97551353D7CB0080FE20 /* PLBlockIMP-iOS-Simulator-Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		050C97581353D7CB0080FE20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				050C97591353D7CB0080FE20 /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05BE853B1352527D001647E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05F56A721352D557003D62C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05F56AC21352D768003D62C7 /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05F5B9861357283C0057187D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DC2EF520486A6940098B216 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05BE853E1352527D001647E3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		05F5B9BE135728A30057187D /* Lipo Binary */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Lipo Binary";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FRAMEWORK=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework\"\n\nlipo \\\n\t\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/libPLBlockIMP-iOS.a\" \\\n\t\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/libPLBlockIMP-iOS.a\" \\\n\t-create -output \"${FRAMEWORK}/Versions/Current/${PRODUCT_NAME}\"\n\ncd \"${FRAMEWORK}\" && ln -sf \"Versions/Current/${PRODUCT_NAME}\" ./";
+		};
+		05F5B9DE13572A250057187D /* Create Disk Image */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Create Disk Image";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Set the destroot\nDESTROOT=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}-${CURRENT_PROJECT_VERSION}\"\nmkdir -p \"${DESTROOT}\"\n\n# Per-platform framework destinations\nIPHONE_DEST=\"${DESTROOT}/iPhone Runtime\"\nMAC_DEST=\"${DESTROOT}/Mac OS X Runtime\"\n\nmkdir -p \"${IPHONE_DEST}\"\ntar -C \"${BUILD_DIR}/${CONFIGURATION}-ios\" -cf - \"PLBlockIMP.framework\" | tar -C \"${IPHONE_DEST}\" -xf - \n\nmkdir -p \"${MAC_DEST}\"\ntar -C \"${BUILD_DIR}/${CONFIGURATION}\" -cf - \"PLBlockIMP.framework\" | tar -C \"${MAC_DEST}\" -xf - \n\n# Create the disk image\nrm -f \"${DESTROOT}.dmg\"\nhdiutil create -srcfolder \"${DESTROOT}\" \"${DESTROOT}.dmg\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		050C97341353D7550080FE20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				050C97351353D7550080FE20 /* trampoline_table.c in Sources */,
+				050C97361353D7550080FE20 /* blockimp.c in Sources */,
+				050C974F1353D7BE0080FE20 /* blockimp_x86_32.tramp in Sources */,
+				050C97501353D7BE0080FE20 /* blockimp_x86_32_stret.tramp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		050C975A1353D7CB0080FE20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				050C975B1353D7CB0080FE20 /* blockimp_tests.m in Sources */,
+				050C975C1353D7CB0080FE20 /* GTMIPhoneUnitTestDelegate.m in Sources */,
+				050C975D1353D7CB0080FE20 /* GTMIPhoneUnitTestMain.m in Sources */,
+				050C975E1353D7CB0080FE20 /* GTMSenTestCase.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05BE853C1352527D001647E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05BE8549135252A7001647E3 /* blockimp_tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05F569ED1352C976003D62C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05F569F31352C99A003D62C7 /* trampoline_table.c in Sources */,
+				05F569F41352C99A003D62C7 /* blockimp.c in Sources */,
+				05F56A011352CA2C003D62C7 /* blockimp_arm.tramp in Sources */,
+				05F56A021352CA2C003D62C7 /* blockimp_arm_stret.tramp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05F56A731352D557003D62C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05F56A961352D5E9003D62C7 /* blockimp_tests.m in Sources */,
+				05F56A911352D5D7003D62C7 /* GTMIPhoneUnitTestDelegate.m in Sources */,
+				05F56A921352D5D7003D62C7 /* GTMIPhoneUnitTestMain.m in Sources */,
+				05F56A931352D5D7003D62C7 /* GTMSenTestCase.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05F5B9871357283C0057187D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DC2EF540486A6940098B216 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05DEA731134D6E9500F49BDB /* trampoline_table.c in Sources */,
+				0530FAAE1351147500829149 /* blockimp_x86_32.tramp in Sources */,
+				05F565F913526F88003D62C7 /* blockimp_x86_32_stret.tramp in Sources */,
+				05F56B151352D9FD003D62C7 /* blockimp_x86_64.tramp in Sources */,
+				05F56B161352D9FD003D62C7 /* blockimp_x86_64_stret.tramp in Sources */,
+				0530FC4F135138E600829149 /* blockimp.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		050C972F1353D74B0080FE20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DC2EF4F0486A6940098B216 /* PLBlockIMP-MacOSX */;
+			targetProxy = 050C972E1353D74B0080FE20 /* PBXContainerItemProxy */;
+		};
+		050C97441353D76F0080FE20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05BE853F1352527D001647E3 /* Tests-MacOSX */;
+			targetProxy = 050C97431353D76F0080FE20 /* PBXContainerItemProxy */;
+		};
+		050C97461353D7700080FE20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05F56A751352D557003D62C7 /* PLBlockIMP-iOS-Tests */;
+			targetProxy = 050C97451353D7700080FE20 /* PBXContainerItemProxy */;
+		};
+		050C97561353D7CB0080FE20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05F569EF1352C976003D62C7 /* PLBlockIMP-iOS-Device */;
+			targetProxy = 050C97571353D7CB0080FE20 /* PBXContainerItemProxy */;
+		};
+		050C97721353D7F00080FE20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 050C97551353D7CB0080FE20 /* PLBlockIMP-iOS-Simulator-Tests */;
+			targetProxy = 050C97711353D7F00080FE20 /* PBXContainerItemProxy */;
+		};
+		05BE856C135254FD001647E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DC2EF4F0486A6940098B216 /* PLBlockIMP-MacOSX */;
+			targetProxy = 05BE856B135254FD001647E3 /* PBXContainerItemProxy */;
+		};
+		05F56A981352D5EC003D62C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05F569EF1352C976003D62C7 /* PLBlockIMP-iOS-Device */;
+			targetProxy = 05F56A971352D5EC003D62C7 /* PBXContainerItemProxy */;
+		};
+		05F5B9931357284C0057187D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05F569EF1352C976003D62C7 /* PLBlockIMP-iOS-Device */;
+			targetProxy = 05F5B9921357284C0057187D /* PBXContainerItemProxy */;
+		};
+		05F5B9951357284E0057187D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 050C97321353D7550080FE20 /* PLBlockIMP-iOS-Simulator */;
+			targetProxy = 05F5B9941357284E0057187D /* PBXContainerItemProxy */;
+		};
+		05F5B997135728520057187D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05F5B9891357283C0057187D /* PLBlockIMP-iOS */;
+			targetProxy = 05F5B996135728520057187D /* PBXContainerItemProxy */;
+		};
+		05F5B9E313572A350057187D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 050C972B1353D7470080FE20 /* PLBlockIMP */;
+			targetProxy = 05F5B9E213572A350057187D /* PBXContainerItemProxy */;
+		};
+		05F5B9E513572A370057187D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 050C97401353D7690080FE20 /* Tests */;
+			targetProxy = 05F5B9E413572A370057187D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C1666FE841158C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C1667FE841158C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		050C972C1353D7470080FE20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = PLBlockIMP;
+			};
+			name = Debug;
+		};
+		050C972D1353D7470080FE20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = PLBlockIMP;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		050C973C1353D7550080FE20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PREBINDING = NO;
+				PRODUCT_NAME = "PLBlockIMP-iOS";
+				SDKROOT = iphonesimulator;
+			};
+			name = Debug;
+		};
+		050C973D1353D7550080FE20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PREBINDING = NO;
+				PRODUCT_NAME = "PLBlockIMP-iOS";
+				SDKROOT = iphonesimulator;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		050C97411353D7690080FE20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = Tests;
+			};
+			name = Debug;
+		};
+		050C97421353D7690080FE20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = Tests;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		050C97621353D7CB0080FE20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "Resources/PLBlockIMP-iOSimulator-Tests-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "BlockIMP-iOS-Tests";
+				SDKROOT = iphonesimulator;
+			};
+			name = Debug;
+		};
+		050C97631353D7CB0080FE20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "Resources/PLBlockIMP-iOSimulator-Tests-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "BlockIMP-iOS-Tests";
+				SDKROOT = iphonesimulator;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		05BE85421352527D001647E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "Resources/Tests-MacOSX-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "Tests-MacOSX";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		05BE85431352527D001647E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "Resources/Tests-MacOSX-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "Tests-MacOSX";
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		05F569F11352C976003D62C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PREBINDING = NO;
+				PRODUCT_NAME = "PLBlockIMP-iOS";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		05F569F21352C976003D62C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PREBINDING = NO;
+				PRODUCT_NAME = "PLBlockIMP-iOS";
+				SDKROOT = iphoneos;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		05F56A791352D557003D62C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "Resources/PLBlockIMP-iOS-Tests-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "BlockIMP-iOS-Tests";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		05F56A7A1352D557003D62C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "Resources/PLBlockIMP-iOS-Tests-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "BlockIMP-iOS-Tests";
+				SDKROOT = iphoneos;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		05F5B98C1357283C0057187D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EFFECTIVE_PLATFORM_NAME = "-ios";
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = PLBlockIMP;
+			};
+			name = Debug;
+		};
+		05F5B98D1357283C0057187D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EFFECTIVE_PLATFORM_NAME = "-ios";
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = PLBlockIMP;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		05F5B9E013572A250057187D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = PLBlockIMP;
+			};
+			name = Debug;
+		};
+		05F5B9E113572A250057187D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = PLBlockIMP;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		1DEB91AE08733DA50010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = "@rpath/";
+				PRODUCT_NAME = PLBlockIMP;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		1DEB91AF08733DA50010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = "@rpath/";
+				PRODUCT_NAME = PLBlockIMP;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		1DEB91B208733DA50010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CURRENT_PROJECT_VERSION = "1.0-beta1";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-DPL_BLOCKIMP_PRIVATE";
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Werror",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Debug;
+		};
+		1DEB91B308733DA50010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CURRENT_PROJECT_VERSION = "1.0-beta1";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_CFLAGS = "-DPL_BLOCKIMP_PRIVATE";
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Werror",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		050C973B1353D7550080FE20 /* Build configuration list for PBXNativeTarget "PLBlockIMP-iOS-Simulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				050C973C1353D7550080FE20 /* Debug */,
+				050C973D1353D7550080FE20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		050C974A1353D7A00080FE20 /* Build configuration list for PBXAggregateTarget "PLBlockIMP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				050C972C1353D7470080FE20 /* Debug */,
+				050C972D1353D7470080FE20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		050C974B1353D7A00080FE20 /* Build configuration list for PBXAggregateTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				050C97411353D7690080FE20 /* Debug */,
+				050C97421353D7690080FE20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		050C97611353D7CB0080FE20 /* Build configuration list for PBXNativeTarget "PLBlockIMP-iOS-Simulator-Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				050C97621353D7CB0080FE20 /* Debug */,
+				050C97631353D7CB0080FE20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05BE85441352527D001647E3 /* Build configuration list for PBXNativeTarget "Tests-MacOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05BE85421352527D001647E3 /* Debug */,
+				05BE85431352527D001647E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05F569F71352C9BE003D62C7 /* Build configuration list for PBXNativeTarget "PLBlockIMP-iOS-Device" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05F569F11352C976003D62C7 /* Debug */,
+				05F569F21352C976003D62C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05F56A7B1352D557003D62C7 /* Build configuration list for PBXNativeTarget "PLBlockIMP-iOS-Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05F56A791352D557003D62C7 /* Debug */,
+				05F56A7A1352D557003D62C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05F5B98E1357283C0057187D /* Build configuration list for PBXNativeTarget "PLBlockIMP-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05F5B98C1357283C0057187D /* Debug */,
+				05F5B98D1357283C0057187D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05F5B9E613572A550057187D /* Build configuration list for PBXAggregateTarget "Disk Image" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05F5B9E013572A250057187D /* Debug */,
+				05F5B9E113572A250057187D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "PLBlockIMP-MacOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91AE08733DA50010E9CD /* Debug */,
+				1DEB91AF08733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "blockimp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91B208733DA50010E9CD /* Debug */,
+				1DEB91B308733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}
