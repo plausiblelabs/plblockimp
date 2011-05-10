@@ -18,7 +18,7 @@ Sample Use
 Use a block to add a new method to NSObject (based on Mike Ash's MABlockClosure example):
 
     int captured = 42;
-    id block = ^(id self, SEL _cmd) { NSLog(@"captured is %d", captured); };
+    id block = ^(id self) { NSLog(@"captured is %d", captured); };
     block = [block copy];
     class_addMethod([NSObject class], @selector(my_printCaptured), pl_imp_implementationWithBlock(block), "v@:");
 
