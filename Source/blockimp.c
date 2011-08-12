@@ -93,8 +93,8 @@ void *pl_imp_getBlock(IMP anImp) {
 BOOL pl_imp_removeBlock(IMP anImp) {
 #if SUPPORT_APPLE_FALLBACK
     /* Prefer Apple's implementation */
-    if (&pl_imp_removeBlock != NULL)
-        return pl_imp_removeBlock(anImp);
+    if (&imp_removeBlock != NULL)
+        return imp_removeBlock(anImp);
 #endif
     
     /* Fetch the config data */
