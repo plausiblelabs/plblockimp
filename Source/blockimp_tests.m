@@ -27,6 +27,10 @@
 #import "GTMSenTestCase.h"
 #import "blockimp.h"
 
+IMP pl_imp_implementationWithBlock (void *block);
+void *pl_imp_getBlock(IMP anImp);
+BOOL pl_imp_removeBlock(IMP anImp);
+
 @interface BlockIMPTests : SenTestCase @end
 
 /**
