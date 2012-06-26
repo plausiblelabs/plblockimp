@@ -31,6 +31,41 @@
 
 #include <stdio.h>
 #include <Block.h>
+#include <dispatch/dispatch.h>
+#include <dlfcn.h>
+
+// Convenience for falling through to the system implementation.
+static BOOL fallthroughEnabled = YES;
+
+#define NEXT(name, ...) do { \
+static dispatch_once_t fptrOnce; \
+static __typeof__(&name) fptr; \
+dispatch_once(&fptrOnce, ^{ fptr = dlsym(RTLD_NEXT, #name); });\
+if (fallthroughEnabled && fptr != NULL) \
+return fptr(__VA_ARGS__); \
+} while(0)
+
+void PLBlockIMPSetFallthroughEnabled(BOOL enabled) {
+    fallthroughEnabled = enabled;
+}
+
+IMP imp_implementationWithBlock(void *block) {
+    NEXT(imp_implementationWithBlock, block);
+
+    return pl_imp_implementationWithBlock(block);
+}
+
+void *imp_getBlock(IMP anImp) {
+    NEXT(imp_getBlock, anImp);
+
+    return pl_imp_getBlock(anImp);
+}
+
+BOOL imp_removeBlock(IMP anImp) {
+    NEXT(imp_removeBlock, anImp);
+
+    return imp_removeBlock(anImp);
+}
 
 #pragma mark Trampolines
 

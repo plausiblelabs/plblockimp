@@ -26,6 +26,8 @@
 
 #include <objc/runtime.h>
 
-extern IMP pl_imp_implementationWithBlock(void *block);
-extern void *pl_imp_getBlock(IMP anImp);
-extern BOOL pl_imp_removeBlock(IMP anImp);
+OBJC_EXPORT IMP imp_implementationWithBlock(void *block);
+OBJC_EXPORT void *imp_getBlock(IMP anImp);
+OBJC_EXPORT BOOL imp_removeBlock(IMP anImp);
+
+OBJC_EXPORT void PLBlockIMPSetFallthroughEnabled(BOOL enabled);

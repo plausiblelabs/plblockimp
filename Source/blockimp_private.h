@@ -123,3 +123,7 @@ struct Block_layout {
     
     // imported variables
 };
+
+IMP pl_imp_implementationWithBlock(void *block);
+void *pl_imp_getBlock(IMP anImp);
+BOOL pl_imp_removeBlock(IMP anImp);
