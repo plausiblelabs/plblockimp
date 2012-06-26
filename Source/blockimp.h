@@ -26,8 +26,22 @@
 
 #include <objc/runtime.h>
 
-OBJC_EXPORT IMP imp_implementationWithBlock(void *block);
-OBJC_EXPORT void *imp_getBlock(IMP anImp);
+#ifdef __MAC_OS_X_VERSION_MIN_REQUIRED
+    #ifdef __MAC_10_8
+        typedef id PLObjectPtr;
+    #else
+        typedef void *PLObjectPtr;
+    #endif
+#else
+    #ifdef __IPHONE_6_0
+        typedef id PLObjectPtr;
+    #else
+        typedef void *PLObjectPtr;
+    #endif
+#endif
+
+OBJC_EXPORT IMP imp_implementationWithBlock(PLObjectPtr block);
+OBJC_EXPORT PLObjectPtr imp_getBlock(IMP anImp);
 OBJC_EXPORT BOOL imp_removeBlock(IMP anImp);
 
 OBJC_EXPORT void PLBlockIMPSetFallthroughEnabled(BOOL enabled);

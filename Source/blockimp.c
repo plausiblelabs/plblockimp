@@ -49,13 +49,13 @@ void PLBlockIMPSetFallthroughEnabled(BOOL enabled) {
     fallthroughEnabled = enabled;
 }
 
-IMP imp_implementationWithBlock(void *block) {
+IMP imp_implementationWithBlock(PLObjectPtr block) {
     NEXT(imp_implementationWithBlock, block);
 
     return pl_imp_implementationWithBlock(block);
 }
 
-void *imp_getBlock(IMP anImp) {
+PLObjectPtr imp_getBlock(IMP anImp) {
     NEXT(imp_getBlock, anImp);
 
     return pl_imp_getBlock(anImp);
