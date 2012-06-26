@@ -47,12 +47,6 @@ static pl_trampoline_table *blockimp_table = NULL;
  * 
  */
 IMP pl_imp_implementationWithBlock (void *block) {
-#if SUPPORT_APPLE_FALLBACK
-    /* Prefer Apple's implementation */
-    if (&imp_implementationWithBlock != NULL)
-        return imp_implementationWithBlock(block);
-#endif
-
     /* Allocate the appropriate trampoline type. */
     pl_trampoline *tramp;
     struct Block_layout *bl = block;
@@ -75,13 +69,6 @@ IMP pl_imp_implementationWithBlock (void *block) {
  *
  */
 void *pl_imp_getBlock(IMP anImp) {
-#if SUPPORT_APPLE_FALLBACK
-    /* Prefer Apple's implementation */
-    if (&imp_getBlock != NULL) {
-        return imp_getBlock(anImp);
-    }
-#endif
-
     /* Fetch the config data and return the block reference. */
     void **config = pl_trampoline_data_ptr(anImp);
     return config[0];
@@ -91,12 +78,6 @@ void *pl_imp_getBlock(IMP anImp) {
  *
  */
 BOOL pl_imp_removeBlock(IMP anImp) {
-#if SUPPORT_APPLE_FALLBACK
-    /* Prefer Apple's implementation */
-    if (&imp_removeBlock != NULL)
-        return imp_removeBlock(anImp);
-#endif
-    
     /* Fetch the config data */
     void **config = pl_trampoline_data_ptr(anImp);
     struct Block_layout *bl = config[0];

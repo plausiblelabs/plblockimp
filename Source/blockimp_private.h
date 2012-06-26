@@ -41,16 +41,6 @@
 # error Unknown Architecture
 #endif
 
-#pragma mark Fallback Support
-
-// if 1, we attempt to use Apple's official implementations
-#define SUPPORT_APPLE_FALLBACK 0
-#if SUPPORT_APPLE_FALLBACK
-extern IMP imp_implementationWithBlock(void *block) WEAK_IMPORT_ATTRIBUTE;
-extern void *imp_getBlock(IMP anImp) WEAK_IMPORT_ATTRIBUTE;
-extern BOOL imp_removeBlock(IMP anImp) WEAK_IMPORT_ATTRIBUTE;
-#endif
-
 /*
  * Block Flags
  */
