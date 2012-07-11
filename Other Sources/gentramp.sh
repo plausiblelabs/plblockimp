@@ -40,7 +40,7 @@ trampoline_prefix () {
 }
 
 # Import the trampoline definition
-. ${INPUT_FILE_PATH}
+. "${INPUT_FILE_PATH}"
 
 check_required () {
     local name=$1
