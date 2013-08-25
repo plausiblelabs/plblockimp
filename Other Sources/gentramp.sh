@@ -188,7 +188,8 @@ main () {
     
     # Write out the table configuration
     local config_src=`cat << EOF    
-        #include "trampoline_table.h"
+        #define PL_BLOCKIMP_PRIVATE 1
+        #include <PLBlockIMP/trampoline_table.h>
 
         extern void *${PAGE_NAME};
         pl_trampoline_table_config ${PAGE_NAME}_config = {
