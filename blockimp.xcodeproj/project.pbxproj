@@ -63,8 +63,9 @@
 		0530FC4F135138E600829149 /* blockimp.c in Sources */ = {isa = PBXBuildFile; fileRef = 0530FC4D135138E600829149 /* blockimp.c */; };
 		05BE8549135252A7001647E3 /* blockimp_tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BE8548135252A7001647E3 /* blockimp_tests.m */; };
 		05BE8559135254A8001647E3 /* PLBlockIMP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* PLBlockIMP.framework */; };
-		05DEA730134D6E9500F49BDB /* trampoline_table.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DEA72E134D6E9500F49BDB /* trampoline_table.h */; };
+		05DEA730134D6E9500F49BDB /* trampoline_table.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DEA72E134D6E9500F49BDB /* trampoline_table.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05DEA731134D6E9500F49BDB /* trampoline_table.c in Sources */ = {isa = PBXBuildFile; fileRef = 05DEA72F134D6E9500F49BDB /* trampoline_table.c */; };
+		05E55C5517C9D2D500BC8510 /* gentramp.sh in Resources */ = {isa = PBXBuildFile; fileRef = 0530FB15135115A500829149 /* gentramp.sh */; };
 		05F565F913526F88003D62C7 /* blockimp_x86_32_stret.tramp in Sources */ = {isa = PBXBuildFile; fileRef = 05F565F613526F69003D62C7 /* blockimp_x86_32_stret.tramp */; };
 		05F56741135288F5003D62C7 /* PLBlockIMP.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* PLBlockIMP.framework */; };
 		05F569F31352C99A003D62C7 /* trampoline_table.c in Sources */ = {isa = PBXBuildFile; fileRef = 05DEA72F134D6E9500F49BDB /* trampoline_table.c */; };
@@ -518,8 +519,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05DEA730134D6E9500F49BDB /* trampoline_table.h in Headers */,
 				0530FC4E135138E600829149 /* blockimp.h in Headers */,
+				05DEA730134D6E9500F49BDB /* trampoline_table.h in Headers */,
 				05F5B9D5135729B70057187D /* PLBlockIMP.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -733,6 +734,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */,
+				05E55C5517C9D2D500BC8510 /* gentramp.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
