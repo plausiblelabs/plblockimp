@@ -102,8 +102,18 @@ compute_asm_size () {
     output+=".globl _byte_count_end\n"
     output+="_byte_count_end:\n"
 
+    # Apple's ARM64 as(1) handling is a thin shim to clang's arm64 integrated
+    # assembler, which does not support documented as(1) behavior. We work
+    # around clang's file extension assumptions via an explicit -x <language> option;
+    # see rdar://15162294 for more details.
+    if [ "${CURRENT_ARCH}" == "arm64" ]; then
+        local asm_args_extra="-x assembler"
+    else
+        local asm_args_extra=""
+    fi
+
     local tempfile=`mktemp /tmp/as_bytecount.XXXXXXXX`
-    echo "${output}" | as -arch "${CURRENT_ARCH}" -o "${tempfile}" -
+    echo "${output}" | as -arch "${CURRENT_ARCH}" $asm_args_extra -o "${tempfile}" -
     if [ $? != 0 ]; then
         echo "Assembling the trampoline failed"
         exit 1
