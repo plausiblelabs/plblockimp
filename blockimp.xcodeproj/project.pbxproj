@@ -100,7 +100,7 @@
 				"${DERIVED_FILE_DIR}/${CURRENT_ARCH}/${INPUT_FILE_BASE}.h",
 				"${DERIVED_FILE_DIR}/${CURRENT_ARCH}/${INPUT_FILE_BASE}_config.c",
 			);
-			script = "OUTPUT_DIR=\"${DERIVED_FILE_DIR}/${CURRENT_ARCH}/\"\nmkdir -p \"${OUTPUT_DIR}\"\n\npushd `dirname ${INPUT_FILE_PATH}` >/dev/null\n\"${SRCROOT}/Other Sources/gentramp.sh\" \"${OUTPUT_DIR}\"\npopd >/dev/null";
+			script = "OUTPUT_DIR=\"${DERIVED_FILE_DIR}/${CURRENT_ARCH}/\"\nmkdir -p \"${OUTPUT_DIR}\"\n\npushd `dirname ${INPUT_FILE_PATH}` >/dev/null\n\"${SRCROOT}/Other Sources/gentramp.sh\" \"${INPUT_FILE_PATH}\" \"${CURRENT_ARCH}\" \"${PLATFORM_NAME}\" \"${INPUT_FILE_BASE}\" \"${OUTPUT_DIR}\"\npopd >/dev/null";
 		};
 		0530FABC135114A700829149 /* PBXBuildRule */ = {
 			isa = PBXBuildRule;
@@ -113,7 +113,7 @@
 				"${DERIVED_FILE_DIR}/${CURRENT_ARCH}/${INPUT_FILE_BASE}.h",
 				"${DERIVED_FILE_DIR}/${CURRENT_ARCH}/${INPUT_FILE_BASE}_config.c",
 			);
-			script = "OUTPUT_DIR=\"${DERIVED_FILE_DIR}/${CURRENT_ARCH}/\"\nmkdir -p \"${OUTPUT_DIR}\"\n\npushd \"$(dirname \"${INPUT_FILE_PATH}\")\" >/dev/null\n\"${SRCROOT}/Other Sources/gentramp.sh\" \"${OUTPUT_DIR}\"\npopd >/dev/null";
+			script = "OUTPUT_DIR=\"${DERIVED_FILE_DIR}/${CURRENT_ARCH}/\"\nmkdir -p \"${OUTPUT_DIR}\"\n\npushd \"$(dirname \"${INPUT_FILE_PATH}\")\" >/dev/null\n\"${SRCROOT}/Other Sources/gentramp.sh\" \"${INPUT_FILE_PATH}\" \"${CURRENT_ARCH}\" \"${PLATFORM_NAME}\" \"${INPUT_FILE_BASE}\" \"${OUTPUT_DIR}\"\npopd >/dev/null";
 		};
 		05F56A071352CAB1003D62C7 /* PBXBuildRule */ = {
 			isa = PBXBuildRule;
@@ -126,7 +126,7 @@
 				"${DERIVED_FILE_DIR}/${CURRENT_ARCH}/${INPUT_FILE_BASE}.h",
 				"${DERIVED_FILE_DIR}/${CURRENT_ARCH}/${INPUT_FILE_BASE}_config.c",
 			);
-			script = "OUTPUT_DIR=\"${DERIVED_FILE_DIR}/${CURRENT_ARCH}/\"\nmkdir -p \"${OUTPUT_DIR}\"\n\npushd `dirname ${INPUT_FILE_PATH}` >/dev/null\n\"${SRCROOT}/Other Sources/gentramp.sh\" \"${OUTPUT_DIR}\"\npopd >/dev/null";
+			script = "OUTPUT_DIR=\"${DERIVED_FILE_DIR}/${CURRENT_ARCH}/\"\nmkdir -p \"${OUTPUT_DIR}\"\n\npushd `dirname ${INPUT_FILE_PATH}` >/dev/null\n\"${SRCROOT}/Other Sources/gentramp.sh\" \"${INPUT_FILE_PATH}\" \"${CURRENT_ARCH}\" \"${PLATFORM_NAME}\" \"${INPUT_FILE_BASE}\" \"${OUTPUT_DIR}\"\npopd >/dev/null";
 		};
 /* End PBXBuildRule section */
 

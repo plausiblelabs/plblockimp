@@ -27,12 +27,28 @@
 #  DEALINGS IN THE SOFTWARE.
 #  -----------------------------------------------------------------------
 
-PROGNAME=$0
+PROGNAME="$0"
 
-OUTPUT_DIR="$1"
-SRC_C_OUTPUT="${OUTPUT_DIR}/${INPUT_FILE_BASE}_config.c"
-SRC_OUTPUT="${OUTPUT_DIR}/${INPUT_FILE_BASE}.s"
-HEADER_OUTPUT="${OUTPUT_DIR}/${INPUT_FILE_BASE}.h"
+INPUT_FILE_PATH="$1"
+CURRENT_ARCH="$2"
+PLATFORM_NAME="$3"
+OUTPUT_FILE_PREFIX="$4"
+OUTPUT_DIR="$5"
+
+if [ -z "${INPUT_FILE_PATH}" ] || [ -z "${CURRENT_ARCH}" ] || [ -z "${PLATFORM_NAME}" ] || [ -z "${OUTPUT_FILE_PREFIX}" ] || [ -z "${OUTPUT_DIR}" ]; then
+    echo "USAGE: $PROGNAME <input file> <arch> <sdk> <output file prefix> <output directory>"
+    echo "  For example, '$PROGNAME blockimp_arm.tramp armv7 iphoneos bli_arm build' would read 'blockimp_arm.tramp'"
+    echo "  and generate the following files in 'build':"
+    echo "  - bli_arm_config.c"
+    echo "  - bli_arm.s"
+    echo "  - bli_arm.h"
+
+    exit 1
+fi
+
+SRC_C_OUTPUT="${OUTPUT_DIR}/${OUTPUT_FILE_PREFIX}_config.c"
+SRC_OUTPUT="${OUTPUT_DIR}/${OUTPUT_FILE_PREFIX}.s"
+HEADER_OUTPUT="${OUTPUT_DIR}/${OUTPUT_FILE_PREFIX}.h"
 
 # Default implementation
 trampoline_prefix () {
@@ -112,13 +128,13 @@ compute_asm_size () {
     fi
 
     local tempfile=`mktemp /tmp/as_bytecount.XXXXXXXX`
-    echo "${output}" | as -arch "${CURRENT_ARCH}" $asm_args_extra -o "${tempfile}" -
+    echo "${output}" | xcrun --sdk "${PLATFORM_NAME}" as -arch "${CURRENT_ARCH}" $asm_args_extra -o "${tempfile}" -
     if [ $? != 0 ]; then
         echo "Assembling the trampoline failed"
         exit 1
     fi
 
-    local byte_size=`nm -t d -P "${tempfile}" | grep ^_byte_count_end | awk '{print $3}'`
+    local byte_size=`xcrun --sdk "${PLATFORM_NAME}" nm -t d -P "${tempfile}" | grep ^_byte_count_end | awk '{print $3}'`
     rm -f "${tempfile}"
 
     echo $byte_size
