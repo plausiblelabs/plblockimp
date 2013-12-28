@@ -52,7 +52,6 @@ check_required () {
     fi
 }
 
-check_required ARCH
 check_required PAGE_SIZE
 check_required PAGE_NAME
 
@@ -151,8 +150,9 @@ main () {
     header "extern void *${PAGE_NAME};"
     header "extern struct pl_trampoline_table_config ${PAGE_NAME}_config;" 
 
-    # Don't generate the sources for the incorrect arch
-    if [ "${ARCH}" != "${CURRENT_ARCH}" ]; then
+    # Don't generate tables for an unsupported arch
+    check_architecture "${CURRENT_ARCH}"
+    if [ "$?" != "1" ]; then
         return
     fi
 
