@@ -32,16 +32,29 @@
 #include <stdio.h>
 #include <Block.h>
 
+/* The ARM64 ABI does not require (or support) the _stret objc_msgSend variant */
+#ifdef __arm64__
+#define STRET_TABLE_REQUIRED 0
+#define STRET_TABLE_CONFIG pl_blockimp_table_page_config
+#define STRET_TABLE blockimp_table
+#else
+#define STRET_TABLE_REQUIRED 1
+#define STRET_TABLE_CONFIG pl_blockimp_table_page_config
+#define STRET_TABLE blockimp_table_stret
+#endif
+
 #pragma mark Trampolines
 
 /* Global lock for our mutable state. Must be held when accessing the trampoline tables. */
 static pthread_mutex_t blockimp_lock = PTHREAD_MUTEX_INITIALIZER;
 
-/* Trampoline tables for objc_msgSend_stret() dispatch. */
-static pl_trampoline_table *blockimp_table_stret = NULL;
-
 /* Trampoline tables for objc_msgSend() dispatch. */
 static pl_trampoline_table *blockimp_table = NULL;
+
+#if STRET_TABLE_REQUIRED
+/* Trampoline tables for objc_msgSend_stret() dispatch. */
+static pl_trampoline_table *blockimp_table_stret = NULL;
+#endif /* STRET_TABLE_REQUIRED */
 
 /**
  * 
@@ -57,7 +70,7 @@ IMP pl_imp_implementationWithBlock (void *block) {
     pl_trampoline *tramp;
     struct Block_layout *bl = block;
     if (bl->flags & BLOCK_USE_STRET) {
-        tramp = pl_trampoline_alloc(&pl_blockimp_table_stret_page_config, &blockimp_lock, &blockimp_table_stret);
+        tramp = pl_trampoline_alloc(&STRET_TABLE_CONFIG, &blockimp_lock, &STRET_TABLE);
     } else {
         tramp = pl_trampoline_alloc(&pl_blockimp_table_page_config, &blockimp_lock, &blockimp_table);
     }
@@ -104,7 +117,7 @@ BOOL pl_imp_removeBlock(IMP anImp) {
 
     /* Drop the trampoline allocation */
     if (bl->flags & BLOCK_USE_STRET) {
-        pl_trampoline_free(&blockimp_lock, &blockimp_table_stret, tramp);
+        pl_trampoline_free(&blockimp_lock, &STRET_TABLE, tramp);
     } else {
         pl_trampoline_free(&blockimp_lock, &blockimp_table, tramp);
     }

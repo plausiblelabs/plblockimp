@@ -37,6 +37,8 @@
 #elif defined(__arm__)
 # include "blockimp_arm.h"
 # include "blockimp_arm_stret.h"
+#elif defined(__arm64__)
+# include "blockimp_arm64.h"
 #else
 # error Unknown Architecture
 #endif

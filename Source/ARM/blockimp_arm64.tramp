@@ -1,0 +1,68 @@
+#!/bin/sh
+
+# -----------------------------------------------------------------------
+#  Copyright (c) 2010-2013, Plausible Labs Cooperative, Inc.
+#  All Rights Reserved.
+# 
+#  Permission is hereby granted, free of charge, to any person obtaining
+#  a copy of this software and associated documentation files (the
+#  ``Software''), to deal in the Software without restriction, including
+#  without limitation the rights to use, copy, modify, merge, publish,
+#  distribute, sublicense, and/or sell copies of the Software, and to
+#  permit persons to whom the Software is furnished to do so, subject to
+#  the following conditions:
+#
+#  The above copyright notice and this permission notice shall be included
+#  in all copies or substantial portions of the Software.
+#
+#  THE SOFTWARE IS PROVIDED ``AS IS'', WITHOUT WARRANTY OF ANY KIND,
+#  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+#  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+#  NONINFRINGEMENT.  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+#  HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+#  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+#  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+#  DEALINGS IN THE SOFTWARE.
+#  -----------------------------------------------------------------------
+
+# Architecture definitions.
+ARCH="arm64"
+PAGE_SIZE="16384"
+
+# The name of this page
+PAGE_NAME=pl_blockimp_table_page
+
+# Prefix to be placed at the start of the trampoline page
+trampoline_prefix () {
+asm << 'EOF'
+    _block_tramp_dispatch:
+        # trampoline address+8 is in lr -- calculate our config page address
+        sub x12, lr, #0x8
+        sub x12, x12, #0x4000
+
+        # restore the link register
+        mov lr, x13
+        
+        # Set the 'self' argument as the second argument
+        mov x1, x0
+        
+        # Load the block pointer as the first argument
+        ldr x0, [x12]
+
+        # Jump to the block pointer
+        ldr x13, [x0, #0x10]
+        br x13
+EOF
+}
+
+# Generate a single trampoline
+trampoline () {
+asm << 'EOF'
+    # Save lr, then jump to the shared prefix implementation
+    mov x13, lr
+    bl _block_tramp_dispatch;
+    // pad out to 16 bytes (the size of our config entries)
+    nop
+    nop
+EOF
+}

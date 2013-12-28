@@ -61,6 +61,7 @@
 		0530FAAE1351147500829149 /* blockimp_x86_32.tramp in Sources */ = {isa = PBXBuildFile; fileRef = 0530FAAA1351144E00829149 /* blockimp_x86_32.tramp */; };
 		0530FC4E135138E600829149 /* blockimp.h in Headers */ = {isa = PBXBuildFile; fileRef = 0530FC4C135138E600829149 /* blockimp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0530FC4F135138E600829149 /* blockimp.c in Sources */ = {isa = PBXBuildFile; fileRef = 0530FC4D135138E600829149 /* blockimp.c */; };
+		0545ACD2186F4270000B197A /* blockimp_arm64.tramp in Sources */ = {isa = PBXBuildFile; fileRef = 05ACD00118023667009B0FB9 /* blockimp_arm64.tramp */; };
 		05BE8549135252A7001647E3 /* blockimp_tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BE8548135252A7001647E3 /* blockimp_tests.m */; };
 		05BE8559135254A8001647E3 /* PLBlockIMP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* PLBlockIMP.framework */; };
 		05DEA730134D6E9500F49BDB /* trampoline_table.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DEA72E134D6E9500F49BDB /* trampoline_table.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -239,6 +240,7 @@
 		0530FB15135115A500829149 /* gentramp.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = gentramp.sh; sourceTree = "<group>"; };
 		0530FC4C135138E600829149 /* blockimp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blockimp.h; sourceTree = "<group>"; };
 		0530FC4D135138E600829149 /* blockimp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = blockimp.c; sourceTree = "<group>"; };
+		05ACD00118023667009B0FB9 /* blockimp_arm64.tramp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = blockimp_arm64.tramp; sourceTree = "<group>"; };
 		05BE85401352527D001647E3 /* Tests-MacOSX.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests-MacOSX.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05BE85411352527D001647E3 /* Tests-MacOSX-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-MacOSX-Info.plist"; sourceTree = "<group>"; };
 		05BE8548135252A7001647E3 /* blockimp_tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = blockimp_tests.m; sourceTree = "<group>"; };
@@ -353,6 +355,15 @@
 			name = Allocator;
 			sourceTree = "<group>";
 		};
+		05ACD0001802363F009B0FB9 /* ARM64 */ = {
+			isa = PBXGroup;
+			children = (
+				05ACD00118023667009B0FB9 /* blockimp_arm64.tramp */,
+			);
+			name = ARM64;
+			path = ARM;
+			sourceTree = "<group>";
+		};
 		05F565F513526F46003D62C7 /* x86_32 */ = {
 			isa = PBXGroup;
 			children = (
@@ -456,6 +467,7 @@
 				050C910A13525AF80080FE20 /* blockimp_private.h */,
 				05BE8548135252A7001647E3 /* blockimp_tests.m */,
 				05F569FE1352CA03003D62C7 /* ARM */,
+				05ACD0001802363F009B0FB9 /* ARM64 */,
 				05F565F513526F46003D62C7 /* x86_32 */,
 				05F56B121352D981003D62C7 /* x86_64 */,
 				0530FAA8135107DF00829149 /* Allocator */,
@@ -823,6 +835,7 @@
 				05F569F41352C99A003D62C7 /* blockimp.c in Sources */,
 				05F56A011352CA2C003D62C7 /* blockimp_arm.tramp in Sources */,
 				05F56A021352CA2C003D62C7 /* blockimp_arm_stret.tramp in Sources */,
+				0545ACD2186F4270000B197A /* blockimp_arm64.tramp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -962,7 +975,7 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "PLBlockIMP-iOS";
 				SDKROOT = iphonesimulator;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -976,7 +989,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "PLBlockIMP-iOS";
 				SDKROOT = iphonesimulator;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1116,15 +1129,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv7,
-					armv6,
-					armv7s,
-				);
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "PLBlockIMP-iOS";
 				SDKROOT = iphoneos;
@@ -1136,14 +1145,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv7,
-					armv6,
-					armv7s,
-				);
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "PLBlockIMP-iOS";
 				SDKROOT = iphoneos;
@@ -1156,10 +1161,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-				);
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1168,7 +1170,7 @@
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
 				INFOPLIST_FILE = "Resources/PLBlockIMP-iOS-Tests-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -1186,10 +1188,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-				);
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1197,7 +1196,7 @@
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
 				INFOPLIST_FILE = "Resources/PLBlockIMP-iOS-Tests-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"-framework",
