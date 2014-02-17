@@ -57,10 +57,11 @@
 		050C975C1353D7CB0080FE20 /* GTMIPhoneUnitTestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F56A8C1352D5CB003D62C7 /* GTMIPhoneUnitTestDelegate.m */; };
 		050C975D1353D7CB0080FE20 /* GTMIPhoneUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F56A8D1352D5CB003D62C7 /* GTMIPhoneUnitTestMain.m */; };
 		050C975E1353D7CB0080FE20 /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F56A8F1352D5CB003D62C7 /* GTMSenTestCase.m */; };
-		050C97601353D7CB0080FE20 /* libPLBlockIMP-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F569F01352C976003D62C7 /* libPLBlockIMP-iOS.a */; };
 		052B1E9D18B2832C00ACCE6B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 052B1E9C18B2832C00ACCE6B /* Default-568h@2x.png */; };
 		052B1E9E18B283EC00ACCE6B /* blockimp_x86_64.tramp in Sources */ = {isa = PBXBuildFile; fileRef = 05F56B131352D9AF003D62C7 /* blockimp_x86_64.tramp */; };
 		052B1E9F18B283EC00ACCE6B /* blockimp_x86_64_stret.tramp in Sources */ = {isa = PBXBuildFile; fileRef = 05F56B141352D9BB003D62C7 /* blockimp_x86_64_stret.tramp */; };
+		052B1EA018B2855600ACCE6B /* libPLBlockIMP-iOS-Simulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 050C973E1353D7550080FE20 /* libPLBlockIMP-iOS-Simulator.a */; };
+		052B1EA118B2856100ACCE6B /* libPLBlockIMP-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F569F01352C976003D62C7 /* libPLBlockIMP-iOS.a */; };
 		0530FAAE1351147500829149 /* blockimp_x86_32.tramp in Sources */ = {isa = PBXBuildFile; fileRef = 0530FAAA1351144E00829149 /* blockimp_x86_32.tramp */; };
 		0530FC4E135138E600829149 /* blockimp.h in Headers */ = {isa = PBXBuildFile; fileRef = 0530FC4C135138E600829149 /* blockimp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0530FC4F135138E600829149 /* blockimp.c in Sources */ = {isa = PBXBuildFile; fileRef = 0530FC4D135138E600829149 /* blockimp.c */; };
@@ -79,7 +80,6 @@
 		05F56A911352D5D7003D62C7 /* GTMIPhoneUnitTestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F56A8C1352D5CB003D62C7 /* GTMIPhoneUnitTestDelegate.m */; };
 		05F56A921352D5D7003D62C7 /* GTMIPhoneUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F56A8D1352D5CB003D62C7 /* GTMIPhoneUnitTestMain.m */; };
 		05F56A931352D5D7003D62C7 /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F56A8F1352D5CB003D62C7 /* GTMSenTestCase.m */; };
-		05F56A951352D5DD003D62C7 /* libPLBlockIMP-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F569F01352C976003D62C7 /* libPLBlockIMP-iOS.a */; };
 		05F56A961352D5E9003D62C7 /* blockimp_tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BE8548135252A7001647E3 /* blockimp_tests.m */; };
 		05F56AC21352D768003D62C7 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05F56AC11352D768003D62C7 /* MainWindow.xib */; };
 		05F56B151352D9FD003D62C7 /* blockimp_x86_64.tramp in Sources */ = {isa = PBXBuildFile; fileRef = 05F56B131352D9AF003D62C7 /* blockimp_x86_64.tramp */; };
@@ -155,19 +155,19 @@
 			remoteGlobalIDString = 05F56A751352D557003D62C7;
 			remoteInfo = "PLBlockIMP-iOS-Tests";
 		};
-		050C97571353D7CB0080FE20 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 05F569EF1352C976003D62C7;
-			remoteInfo = "PLBlockIMP-iOS";
-		};
 		050C97711353D7F00080FE20 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 050C97551353D7CB0080FE20;
 			remoteInfo = "PLBlockIMP-iOSimulator-Tests";
+		};
+		052B1EA218B2859200ACCE6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 050C97321353D7550080FE20;
+			remoteInfo = "PLBlockIMP-iOS-Simulator";
 		};
 		05BE856B135254FD001647E3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -236,7 +236,7 @@
 
 /* Begin PBXFileReference section */
 		050C910A13525AF80080FE20 /* blockimp_private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blockimp_private.h; sourceTree = "<group>"; };
-		050C973E1353D7550080FE20 /* libPLBlockIMP-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPLBlockIMP-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		050C973E1353D7550080FE20 /* libPLBlockIMP-iOS-Simulator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPLBlockIMP-iOS-Simulator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		050C97641353D7CB0080FE20 /* BlockIMP-iOS-Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BlockIMP-iOS-Tests.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		050C97671353D7CB0080FE20 /* PLBlockIMP-iOSimulator-Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PLBlockIMP-iOSimulator-Tests-Info.plist"; sourceTree = "<group>"; };
 		052B1E9C18B2832C00ACCE6B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -291,7 +291,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				050C97601353D7CB0080FE20 /* libPLBlockIMP-iOS.a in Frameworks */,
+				052B1EA018B2855600ACCE6B /* libPLBlockIMP-iOS-Simulator.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,7 +314,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05F56A951352D5DD003D62C7 /* libPLBlockIMP-iOS.a in Frameworks */,
+				052B1EA118B2856100ACCE6B /* libPLBlockIMP-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,7 +343,7 @@
 				05BE85401352527D001647E3 /* Tests-MacOSX.octest */,
 				05F569F01352C976003D62C7 /* libPLBlockIMP-iOS.a */,
 				05F56A761352D557003D62C7 /* BlockIMP-iOS-Tests.app */,
-				050C973E1353D7550080FE20 /* libPLBlockIMP-iOS.a */,
+				050C973E1353D7550080FE20 /* libPLBlockIMP-iOS-Simulator.a */,
 				050C97641353D7CB0080FE20 /* BlockIMP-iOS-Tests.app */,
 				05F5B98A1357283C0057187D /* PLBlockIMP.framework */,
 			);
@@ -560,7 +560,7 @@
 			);
 			name = "PLBlockIMP-iOS-Simulator";
 			productName = "PLBlockIMP-iOS";
-			productReference = 050C973E1353D7550080FE20 /* libPLBlockIMP-iOS.a */;
+			productReference = 050C973E1353D7550080FE20 /* libPLBlockIMP-iOS-Simulator.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		050C97551353D7CB0080FE20 /* PLBlockIMP-iOS-Simulator-Tests */ = {
@@ -574,7 +574,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				050C97561353D7CB0080FE20 /* PBXTargetDependency */,
+				052B1EA318B2859200ACCE6B /* PBXTargetDependency */,
 			);
 			name = "PLBlockIMP-iOS-Simulator-Tests";
 			productName = "BlockIMP-iOS-Tests";
@@ -896,15 +896,15 @@
 			target = 05F56A751352D557003D62C7 /* PLBlockIMP-iOS-Tests */;
 			targetProxy = 050C97451353D7700080FE20 /* PBXContainerItemProxy */;
 		};
-		050C97561353D7CB0080FE20 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 05F569EF1352C976003D62C7 /* PLBlockIMP-iOS-Device */;
-			targetProxy = 050C97571353D7CB0080FE20 /* PBXContainerItemProxy */;
-		};
 		050C97721353D7F00080FE20 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 050C97551353D7CB0080FE20 /* PLBlockIMP-iOS-Simulator-Tests */;
 			targetProxy = 050C97711353D7F00080FE20 /* PBXContainerItemProxy */;
+		};
+		052B1EA318B2859200ACCE6B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 050C97321353D7550080FE20 /* PLBlockIMP-iOS-Simulator */;
+			targetProxy = 052B1EA218B2859200ACCE6B /* PBXContainerItemProxy */;
 		};
 		05BE856C135254FD001647E3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -984,7 +984,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PRODUCT_NAME = "PLBlockIMP-iOS";
+				PRODUCT_NAME = "PLBlockIMP-iOS-Simulator";
 				SDKROOT = iphonesimulator;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -998,7 +998,7 @@
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PRODUCT_NAME = "PLBlockIMP-iOS";
+				PRODUCT_NAME = "PLBlockIMP-iOS-Simulator";
 				SDKROOT = iphonesimulator;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				ZERO_LINK = NO;
