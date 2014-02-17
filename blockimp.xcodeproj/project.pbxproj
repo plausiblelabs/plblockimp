@@ -66,6 +66,7 @@
 		0530FC4E135138E600829149 /* blockimp.h in Headers */ = {isa = PBXBuildFile; fileRef = 0530FC4C135138E600829149 /* blockimp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0530FC4F135138E600829149 /* blockimp.c in Sources */ = {isa = PBXBuildFile; fileRef = 0530FC4D135138E600829149 /* blockimp.c */; };
 		0545ACD2186F4270000B197A /* blockimp_arm64.tramp in Sources */ = {isa = PBXBuildFile; fileRef = 05ACD00118023667009B0FB9 /* blockimp_arm64.tramp */; };
+		05A7FBF418B296610071D362 /* gentramp.sh in Resources */ = {isa = PBXBuildFile; fileRef = 0530FB15135115A500829149 /* gentramp.sh */; };
 		05BE8549135252A7001647E3 /* blockimp_tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BE8548135252A7001647E3 /* blockimp_tests.m */; };
 		05BE8559135254A8001647E3 /* PLBlockIMP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* PLBlockIMP.framework */; };
 		05CAE65918B2940F00F76068 /* trampoline_table.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DEA72E134D6E9500F49BDB /* trampoline_table.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -746,6 +747,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05A7FBF418B296610071D362 /* gentramp.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
