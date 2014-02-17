@@ -58,6 +58,9 @@
 		050C975D1353D7CB0080FE20 /* GTMIPhoneUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F56A8D1352D5CB003D62C7 /* GTMIPhoneUnitTestMain.m */; };
 		050C975E1353D7CB0080FE20 /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F56A8F1352D5CB003D62C7 /* GTMSenTestCase.m */; };
 		050C97601353D7CB0080FE20 /* libPLBlockIMP-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F569F01352C976003D62C7 /* libPLBlockIMP-iOS.a */; };
+		052B1E9D18B2832C00ACCE6B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 052B1E9C18B2832C00ACCE6B /* Default-568h@2x.png */; };
+		052B1E9E18B283EC00ACCE6B /* blockimp_x86_64.tramp in Sources */ = {isa = PBXBuildFile; fileRef = 05F56B131352D9AF003D62C7 /* blockimp_x86_64.tramp */; };
+		052B1E9F18B283EC00ACCE6B /* blockimp_x86_64_stret.tramp in Sources */ = {isa = PBXBuildFile; fileRef = 05F56B141352D9BB003D62C7 /* blockimp_x86_64_stret.tramp */; };
 		0530FAAE1351147500829149 /* blockimp_x86_32.tramp in Sources */ = {isa = PBXBuildFile; fileRef = 0530FAAA1351144E00829149 /* blockimp_x86_32.tramp */; };
 		0530FC4E135138E600829149 /* blockimp.h in Headers */ = {isa = PBXBuildFile; fileRef = 0530FC4C135138E600829149 /* blockimp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0530FC4F135138E600829149 /* blockimp.c in Sources */ = {isa = PBXBuildFile; fileRef = 0530FC4D135138E600829149 /* blockimp.c */; };
@@ -236,6 +239,7 @@
 		050C973E1353D7550080FE20 /* libPLBlockIMP-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPLBlockIMP-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		050C97641353D7CB0080FE20 /* BlockIMP-iOS-Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BlockIMP-iOS-Tests.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		050C97671353D7CB0080FE20 /* PLBlockIMP-iOSimulator-Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PLBlockIMP-iOSimulator-Tests-Info.plist"; sourceTree = "<group>"; };
+		052B1E9C18B2832C00ACCE6B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		0530FAAA1351144E00829149 /* blockimp_x86_32.tramp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = blockimp_x86_32.tramp; sourceTree = "<group>"; };
 		0530FB15135115A500829149 /* gentramp.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = gentramp.sh; sourceTree = "<group>"; };
 		0530FC4C135138E600829149 /* blockimp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blockimp.h; sourceTree = "<group>"; };
@@ -454,6 +458,7 @@
 				8DC2EF5A0486A6940098B216 /* Info.plist */,
 				089C1666FE841158C02AAC07 /* InfoPlist.strings */,
 				050C97671353D7CB0080FE20 /* PLBlockIMP-iOSimulator-Tests-Info.plist */,
+				052B1E9C18B2832C00ACCE6B /* Default-568h@2x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -731,6 +736,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05F56AC21352D768003D62C7 /* MainWindow.xib in Resources */,
+				052B1E9D18B2832C00ACCE6B /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -805,6 +811,8 @@
 				050C97361353D7550080FE20 /* blockimp.c in Sources */,
 				050C974F1353D7BE0080FE20 /* blockimp_x86_32.tramp in Sources */,
 				050C97501353D7BE0080FE20 /* blockimp_x86_32_stret.tramp in Sources */,
+				052B1E9E18B283EC00ACCE6B /* blockimp_x86_64.tramp in Sources */,
+				052B1E9F18B283EC00ACCE6B /* blockimp_x86_64_stret.tramp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -971,7 +979,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -986,7 +994,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
@@ -1021,8 +1029,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1048,8 +1055,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1079,7 +1085,6 @@
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_ENABLE_OBJC_GC = supported;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1106,7 +1111,6 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_ENABLE_OBJC_GC = supported;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
@@ -1292,7 +1296,6 @@
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_GC = supported;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Resources/Info.plist;
@@ -1310,7 +1313,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
-				GCC_ENABLE_OBJC_GC = supported;
 				GCC_MODEL_TUNING = G5;
 				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "@rpath/";
