@@ -68,6 +68,7 @@
 		0545ACD2186F4270000B197A /* blockimp_arm64.tramp in Sources */ = {isa = PBXBuildFile; fileRef = 05ACD00118023667009B0FB9 /* blockimp_arm64.tramp */; };
 		05BE8549135252A7001647E3 /* blockimp_tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BE8548135252A7001647E3 /* blockimp_tests.m */; };
 		05BE8559135254A8001647E3 /* PLBlockIMP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* PLBlockIMP.framework */; };
+		05CAE65918B2940F00F76068 /* trampoline_table.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DEA72E134D6E9500F49BDB /* trampoline_table.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05DEA730134D6E9500F49BDB /* trampoline_table.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DEA72E134D6E9500F49BDB /* trampoline_table.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05DEA731134D6E9500F49BDB /* trampoline_table.c in Sources */ = {isa = PBXBuildFile; fileRef = 05DEA72F134D6E9500F49BDB /* trampoline_table.c */; };
 		05E55C5517C9D2D500BC8510 /* gentramp.sh in Resources */ = {isa = PBXBuildFile; fileRef = 0530FB15135115A500829149 /* gentramp.sh */; };
@@ -528,6 +529,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05F5B9981357285C0057187D /* blockimp.h in Headers */,
+				05CAE65918B2940F00F76068 /* trampoline_table.h in Headers */,
 				05F5B9D4135729B70057187D /* PLBlockIMP.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
