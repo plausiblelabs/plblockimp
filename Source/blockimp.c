@@ -31,6 +31,41 @@
 
 #include <stdio.h>
 #include <Block.h>
+#include <dispatch/dispatch.h>
+#include <dlfcn.h>
+
+// Convenience for falling through to the system implementation.
+static BOOL fallthroughEnabled = YES;
+
+#define NEXT(name, ...) do { \
+static dispatch_once_t fptrOnce; \
+static __typeof__(&name) fptr; \
+dispatch_once(&fptrOnce, ^{ fptr = dlsym(RTLD_NEXT, #name); });\
+if (fallthroughEnabled && fptr != NULL) \
+return fptr(__VA_ARGS__); \
+} while(0)
+
+void PLBlockIMPSetFallthroughEnabled(BOOL enabled) {
+    fallthroughEnabled = enabled;
+}
+
+IMP imp_implementationWithBlock(PLObjectPtr block) {
+    NEXT(imp_implementationWithBlock, block);
+
+    return pl_imp_implementationWithBlock(block);
+}
+
+PLObjectPtr imp_getBlock(IMP anImp) {
+    NEXT(imp_getBlock, anImp);
+
+    return pl_imp_getBlock(anImp);
+}
+
+BOOL imp_removeBlock(IMP anImp) {
+    NEXT(imp_removeBlock, anImp);
+
+    return imp_removeBlock(anImp);
+}
 
 /* The ARM64 ABI does not require (or support) the _stret objc_msgSend variant */
 #ifdef __arm64__
@@ -60,12 +95,6 @@ static pl_trampoline_table *blockimp_table_stret = NULL;
  * 
  */
 IMP pl_imp_implementationWithBlock (void *block) {
-#if SUPPORT_APPLE_FALLBACK
-    /* Prefer Apple's implementation */
-    if (&imp_implementationWithBlock != NULL)
-        return imp_implementationWithBlock(block);
-#endif
-
     /* Allocate the appropriate trampoline type. */
     pl_trampoline *tramp;
     struct Block_layout *bl = block;
@@ -88,13 +117,6 @@ IMP pl_imp_implementationWithBlock (void *block) {
  *
  */
 void *pl_imp_getBlock(IMP anImp) {
-#if SUPPORT_APPLE_FALLBACK
-    /* Prefer Apple's implementation */
-    if (&imp_getBlock != NULL) {
-        return imp_getBlock(anImp);
-    }
-#endif
-
     /* Fetch the config data and return the block reference. */
     void **config = pl_trampoline_data_ptr(anImp);
     return config[0];
@@ -104,12 +126,6 @@ void *pl_imp_getBlock(IMP anImp) {
  *
  */
 BOOL pl_imp_removeBlock(IMP anImp) {
-#if SUPPORT_APPLE_FALLBACK
-    /* Prefer Apple's implementation */
-    if (&imp_removeBlock != NULL)
-        return imp_removeBlock(anImp);
-#endif
-    
     /* Fetch the config data */
     void **config = pl_trampoline_data_ptr(anImp);
     struct Block_layout *bl = config[0];
